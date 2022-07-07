@@ -26,7 +26,7 @@ class ListUsersAdapter(private val onClick: (String) -> Unit) : PagingDataAdapte
         if (data != null) {
             holder.bind(data)
             holder.itemView.setOnClickListener {
-                onClick(data.firstName + ""+data.lastName)
+                onClick(data.firstName + " "+data.lastName)
             }
 
         }
