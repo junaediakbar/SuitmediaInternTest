@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -39,12 +40,13 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
-        android:text="Welcome"
+        android:text="@string/welcome"
         android:textAllCaps="false"
         android:textColor="@color/normalText"
         android:textFontWeight="400"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        tools:ignore="UnusedAttribute" />
 
     <TextView
         android:id="@+id/tvUsername"
@@ -53,27 +55,30 @@
         android:layout_marginStart="20dp"
         android:fontFamily="@font/poppins"
         android:textAllCaps="false"
+        android:text="@string/default_name"
         android:textColor="@color/normalText"
         android:textFontWeight="600"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
-        tools:text="John Doe" />
+        tools:text="John Doe"
+        tools:ignore="UnusedAttribute" />
 
     <TextView
         android:id="@+id/tvselectedUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
-        android:text="Selected User Name"
+        android:text="@string/selected_user_name"
         android:textColor="@color/normalText"
         android:textFontWeight="600"
-        android:textSize="24dp"
+        android:textSize="24sp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnChooseUser"
@@ -83,10 +88,11 @@
         android:layout_marginBottom="30dp"
         android:backgroundTint="@color/buttonPrimary"
         android:fontFamily="@font/poppins"
-        android:text="Choose a user"
+        android:text="@string/choose_a_user"
         android:textFontWeight="500"
         app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnusedAttribute" />
 </androidx.constraintlayout.widget.ConstraintLayout>

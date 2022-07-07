@@ -10,5 +10,5 @@
     <color name="transparent">#00FFFFFF</color>
     <color name="buttonPrimary">#2B637B</color>
     <color name="normalText">#04021D</color>
-    <color name="emailtext">#686777</color>
+    <color name="greytext">#686777</color>
 </resources>

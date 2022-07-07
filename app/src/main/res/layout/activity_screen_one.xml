@@ -6,15 +6,18 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_img"
     tools:context=".ui.screen1.ScreenOneActivity">
+
     <ImageView
         android:id="@+id/photoProfile"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="120dp"
+        android:contentDescription="@string/add_image_profile"
         android:src="@drawable/add_image_profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck,ImageContrastCheck" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,7 +46,8 @@
                 android:imeOptions="actionNext"
                 android:singleLine="true"
                 android:textColor="@color/normalText"
-                android:textFontWeight="500" />
+                android:textFontWeight="500"
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
 
         </androidx.cardview.widget.CardView>
 
@@ -65,7 +69,8 @@
                 android:imeOptions="actionDone"
                 android:singleLine="true"
                 android:textColor="@color/normalText"
-                android:textFontWeight="500" />
+                android:textFontWeight="500"
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
         </androidx.cardview.widget.CardView>
 
         <com.google.android.material.button.MaterialButton
@@ -77,7 +82,8 @@
             android:fontFamily="@font/poppins"
             android:text="check"
             android:textFontWeight="500"
-            app:cornerRadius="15dp" />
+            app:cornerRadius="15dp"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNext"
@@ -88,7 +94,8 @@
             android:fontFamily="@font/poppins"
             android:text="next"
             android:textFontWeight="500"
-            app:cornerRadius="15dp" />
+            app:cornerRadius="15dp"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,11 @@
+@file:Suppress("UnusedImport")
+
 package com.juned.expertclass.suitmediainterntest.ui.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.paging.PagingData
+import androidx.core.content.ContextCompat.startActivity
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -11,9 +13,8 @@ import com.bumptech.glide.Glide
 import com.juned.expertclass.suitmediainterntest.data.remote.UserDataResponse
 import com.juned.expertclass.suitmediainterntest.databinding.ItemListUserBinding
 import com.juned.expertclass.suitmediainterntest.ui.screen2.ScreenTwoActivity
-import kotlinx.coroutines.delay
 
-class ListUsersAdapter : PagingDataAdapter<UserDataResponse, ListUsersAdapter.ListUsersViewHolder>(DIFF_CALLBACK) {
+class ListUsersAdapter(private val onClick: (String) -> Unit) : PagingDataAdapter<UserDataResponse, ListUsersAdapter.ListUsersViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListUsersViewHolder {
         val binding = ItemListUserBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -25,10 +26,9 @@ class ListUsersAdapter : PagingDataAdapter<UserDataResponse, ListUsersAdapter.Li
         if (data != null) {
             holder.bind(data)
             holder.itemView.setOnClickListener {
-                val intent = Intent( holder.itemView.context, ScreenTwoActivity::class.java)
-                intent.putExtra(ScreenTwoActivity.EXTRA_USER, data)
-                holder.itemView.context.startActivity(intent)
+                onClick(data.firstName + ""+data.lastName)
             }
+
         }
     }
 
