@@ -89,6 +89,7 @@
         android:backgroundTint="@color/buttonPrimary"
         android:fontFamily="@font/poppins"
         android:text="@string/choose_a_user"
+        android:textAllCaps="false"
         android:textFontWeight="500"
         app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"

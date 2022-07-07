@@ -10,7 +10,7 @@
     <string name="default_name">John Doe</string>
     <string name="welcome">Welcome</string>
     <string name="selected_user_name">Selected User Name</string>
-    <string name="choose_a_user">Choose a user</string>
+    <string name="choose_a_user">Choose a User</string>
     <string name="add_image_profile">add image profile</string>
     <string name="cant_get_data">Can\'t get data from internet</string>
 </resources>
